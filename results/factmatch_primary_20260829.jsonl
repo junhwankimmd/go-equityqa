@@ -1,0 +1,300 @@
+{"item_id": "AP-001", "model": "gpt", "match": "yes", "rationale": "All three founder mutations correct; Struewing 1997 NEJM PMID 9145676 accurate and supports claim."}
+{"item_id": "AP-002", "model": "gpt", "match": "yes", "rationale": "Correctly identifies BRCA2 999del5; Thorlacius 1996 PMID 8673099 is the accurate founding citation."}
+{"item_id": "AP-003", "model": "gpt", "match": "yes", "rationale": "Correct founder mutation 5382insC; PMID 15980986 is a valid Górski Polish BRCA1 founder mutation study."}
+{"item_id": "AP-004", "model": "gpt", "match": "partial", "rationale": "1675delA is genuine Norwegian founder mutation, but PMID 11720833 likely misattributed/unverified."}
+{"item_id": "AP-005", "model": "gpt", "match": "partial", "rationale": "Correct founder mutation and Tonin author, but PMID 9792861 likely misattributed to this specific paper."}
+{"item_id": "AP-006", "model": "gpt", "match": "partial", "rationale": "Correct recurrent Greek variants described, but cited PMID 15146462 likely misattributed."}
+{"item_id": "AP-009", "model": "gpt", "match": "yes", "rationale": "Describes recurrent Japanese variants; Momozawa 2018 PMID 30287823 is correct and supports the claim."}
+{"item_id": "AP-010", "model": "gpt", "match": "partial", "rationale": "Describes recurrent Korean variants correctly, but PMID 22807931 appears misattributed/unverified for this claim."}
+{"item_id": "AP-011", "model": "gpt", "match": "partial", "rationale": "Citation plausible and supports claim, but PMID likely misattributed/unverifiable."}
+{"item_id": "AP-012", "model": "gpt", "match": "partial", "rationale": "Correct on sparse/heterogeneous data, but PMID 12175531 appears fabricated/misattributed."}
+{"item_id": "AP-013", "model": "gpt", "match": "partial", "rationale": "Discusses recurrent Iranian variants plausibly, but PMID likely misattributed/unverified for the specific claim."}
+{"item_id": "AP-014", "model": "gpt", "match": "no", "rationale": "Citation likely fabricated/misattributed; PMID 12459721 does not match claimed Egyptian BRCA study."}
+{"item_id": "AP-016", "model": "gpt", "match": "partial", "rationale": "Correct mutation c.5266dupC, but PMID likely misattributed/unverified for this specific claim."}
+{"item_id": "AP-017", "model": "gpt", "match": "partial", "rationale": "Correct recurrent Colombian variants; PMID 25875339 is Breast Cancer Res Treat, not PLoS One—citation misattributed."}
+{"item_id": "AP-018", "model": "gpt", "match": "no", "rationale": "Cited PMID 19787029 does not match the referenced Vaidyanathan Indian BRCA study; likely misattribution."}
+{"item_id": "AP-001", "model": "claude", "match": "yes", "rationale": "Correctly names all three founder mutations; citation is genuine and supports claim."}
+{"item_id": "AP-002", "model": "claude", "match": "yes", "rationale": "Correctly identifies 999del5; PMID 8640224 accurately supports the claim."}
+{"item_id": "AP-003", "model": "claude", "match": "yes", "rationale": "Correct mutation (5382insC/C61G) with accurate Górski 2000 citation, PMID 10788334 is valid."}
+{"item_id": "AP-004", "model": "claude", "match": "partial", "rationale": "Correct Norwegian founder mutations named, but no PMID provided and citation unverified/self-flagged."}
+{"item_id": "AP-005", "model": "claude", "match": "yes", "rationale": "Correct Quebec founder mutations (8765delAG, C4446T) with accurate Tonin 1998 citation, PMID 9792861 valid."}
+{"item_id": "AP-006", "model": "claude", "match": "partial", "rationale": "Correct recurrent variants and authors, but PMID likely misattributed; model itself admits uncertainty."}
+{"item_id": "AP-009", "model": "claude", "match": "no", "rationale": "No PMID provided; only vague, partly inaccurate patterns and unverified author references without specific citation."}
+{"item_id": "AP-010", "model": "claude", "match": "no", "rationale": "No PMID cited; only general description without specific supporting citation."}
+{"item_id": "AP-011", "model": "claude", "match": "no", "rationale": "No citation or PMID provided; only general statements and search advice."}
+{"item_id": "AP-012", "model": "claude", "match": "no", "rationale": "Provides general info but no specific PMID citation as required."}
+{"item_id": "AP-013", "model": "claude", "match": "no", "rationale": "No PMID or specific recurrent variant provided; only general statements and disclaimer."}
+{"item_id": "AP-014", "model": "claude", "match": "no", "rationale": "No citation or PMID provided; only general description with explicit refusal to cite."}
+{"item_id": "AP-016", "model": "claude", "match": "yes", "rationale": "Correct mutation c.5266dupC and valid citation PMID 22430266 supports the claim."}
+{"item_id": "AP-017", "model": "claude", "match": "yes", "rationale": "Correct recurrent Colombian founder mutations; Torres 2007 PMID 17061041 is accurate and supports claim."}
+{"item_id": "AP-018", "model": "claude", "match": "no", "rationale": "No PMID provided; explicitly declines to cite, only vague unverified claims."}
+{"item_id": "AP-019", "model": "claude", "match": "no", "rationale": "Refuses to provide any PMID; no citation supporting the specific claim given."}
+{"item_id": "AP-020", "model": "claude", "match": "no", "rationale": "No specific PMID or citation provided; only general context and search suggestions."}
+{"item_id": "AP-023", "model": "claude", "match": "partial", "rationale": "Correct higher frequency claim but no specific PMID provided; declined to cite."}
+{"item_id": "AP-024", "model": "claude", "match": "partial", "rationale": "Correct ancestry patterns, but PMIDs likely misattributed and self-flagged as unverified."}
+{"item_id": "AP-025", "model": "claude", "match": "yes", "rationale": "Correct HPV35, not in 9-valent, valid Pinheiro 2020 citation PMID 32363580 supporting claim."}
+{"item_id": "AP-026", "model": "claude", "match": "yes", "rationale": "Correctly identifies HPV52/58; PMID 20952450 (Li et al. IJC 2011) exists and supports Asian enrichment claim."}
+{"item_id": "AP-027", "model": "claude", "match": "partial", "rationale": "Correct proportion range given but no PMID citation provided as required."}
+{"item_id": "AP-028", "model": "claude", "match": "partial", "rationale": "Claim correct and well-supported, but PMID 30720863 misattributed to wrong citation details/year."}
+{"item_id": "AP-029", "model": "claude", "match": "no", "rationale": "Model declined to name c.943ins10 or provide any citation."}
+{"item_id": "AP-030", "model": "claude", "match": "partial", "rationale": "Correct clinical claims; PMID 37535792 likely misattributed, model itself flags uncertainty."}
+{"item_id": "AP-034", "model": "claude", "match": "partial", "rationale": "Correctly states limited availability but provides no PMID citation as required."}
+{"item_id": "AP-035", "model": "claude", "match": "partial", "rationale": "Correct claim (limited availability), but citations unverified and possibly misattributed, as model admits."}
+{"item_id": "AP-036", "model": "claude", "match": "partial", "rationale": "Correctly describes severe shortage but provides no PMID citation as required."}
+{"item_id": "AP-037", "model": "claude", "match": "no", "rationale": "Correctly describes scarcity but provides no valid PMID citation, explicitly declining to supply one."}
+{"item_id": "AP-038", "model": "claude", "match": "partial", "rationale": "Correctly describes limited workforce but provides no specific PMID, explicitly declining to cite."}
+{"item_id": "AP-039", "model": "claude", "match": "partial", "rationale": "Correctly describes limited availability but citation unverified and self-admittedly possibly fabricated."}
+{"item_id": "AP-040", "model": "claude", "match": "partial", "rationale": "Correct claim of severe shortage, but PMID likely misattributed; model itself flags uncertainty."}
+{"item_id": "AP-041", "model": "claude", "match": "yes", "rationale": "Correct PMID 22826322 for Binagwaho Rwanda HPV paper, accurately supports high coverage claim."}
+{"item_id": "AP-042", "model": "claude", "match": "partial", "rationale": "Correct catastrophic cost content, but citation unverified and self-flagged as possibly fabricated."}
+{"item_id": "AP-043", "model": "claude", "match": "partial", "rationale": "Correct claim but citation unverified and self-admitted possibly hallucinated PMID."}
+{"item_id": "AP-044", "model": "claude", "match": "partial", "rationale": "Correctly states access is severely limited, but citation is a general classification review, not LMIC-specific; model admits uncertainty."}
+{"item_id": "AP-045", "model": "claude", "match": "partial", "rationale": "Correctly describes limited availability but provides no specific PMID as required."}
+{"item_id": "AP-046", "model": "claude", "match": "partial", "rationale": "Correctly identifies cost as key barrier but provides no verifiable PMID citation."}
+{"item_id": "AP-047", "model": "claude", "match": "partial", "rationale": "Correct claim of limited access; citation plausible but PMID accuracy unverified, self-flagged as uncertain."}
+{"item_id": "AP-048", "model": "claude", "match": "partial", "rationale": "Correctly describes severe shortage but declines to provide required PMID citation."}
+{"item_id": "AP-049", "model": "claude", "match": "partial", "rationale": "Declines specific rate/PMID but correctly flags registry limitations and citation fabrication risk."}
+{"item_id": "AP-050", "model": "claude", "match": "no", "rationale": "Declines to provide specific rate; only cites global GLOBOCAN paper not supporting Cameroon-specific claim."}
+{"item_id": "AP-051", "model": "claude", "match": "partial", "rationale": "Acknowledges registry limitation and cites real GLOBOCAN PMID, but provides no DRC-specific rate."}
+{"item_id": "AP-052", "model": "claude", "match": "no", "rationale": "No specific rate or PMID provided; only general ranges and search guidance."}
+{"item_id": "AP-053", "model": "claude", "match": "no", "rationale": "No specific PMID or verified rate provided; only general estimates and source suggestions."}
+{"item_id": "AP-054", "model": "claude", "match": "no", "rationale": "No mortality rate provided; PMID given unverified and not specific to Burkina Faso claim."}
+{"item_id": "AP-055", "model": "claude", "match": "partial", "rationale": "Declines fabrication, gives plausible range but no PMID citation as required."}
+{"item_id": "AP-056", "model": "claude", "match": "no", "rationale": "Declines to provide any PMID citation; only gives generic distribution without required specific reference."}
+{"item_id": "AP-057", "model": "claude", "match": "no", "rationale": "Declined to provide citation; no PMID or Myanmar-specific data given."}
+{"item_id": "AP-058", "model": "claude", "match": "partial", "rationale": "Correctly notes registry limitations and refuses to fabricate, but provides no citation as required."}
+{"item_id": "AP-059", "model": "claude", "match": "no", "rationale": "No incidence rate or supporting PMID provided; only search guidance given."}
+{"item_id": "AP-060", "model": "claude", "match": "no", "rationale": "No incidence rate or valid PMID provided; only general guidance and unverified reference."}
+{"item_id": "AP-061", "model": "claude", "match": "no", "rationale": "Declines to provide any PMID; no specific citation supporting the claim."}
+{"item_id": "AP-062", "model": "claude", "match": "no", "rationale": "Declines to provide incidence figure or PMID; no citation supporting specific claim."}
+{"item_id": "AP-063", "model": "claude", "match": "no", "rationale": "Refuses to provide incidence figure or any PMID citation."}
+{"item_id": "AP-064", "model": "claude", "match": "yes", "rationale": "Correct distribution; PMID 21991313 accurately matches the cited Ciapponi Latin America meta-analysis."}
+{"item_id": "AP-065", "model": "claude", "match": "partial", "rationale": "Genotype distribution accurate, but PMID 19318503 is normal-cytology study, not cervical cancer; misattribution."}
+{"item_id": "AP-066", "model": "claude", "match": "no", "rationale": "No PMID provided; model explicitly declined to cite a specific citation."}
+{"item_id": "AP-067", "model": "claude", "match": "no", "rationale": "PMID 35148842 unverified and likely misattributed; model itself disclaims accuracy."}
+{"item_id": "AP-068", "model": "claude", "match": "yes", "rationale": "Correct Shastri Mumbai VIA trial, PMID 24563518 valid, 31% mortality reduction accurate."}
+{"item_id": "AP-069", "model": "claude", "match": "yes", "rationale": "Arbyn 2018 BMJ meta-analysis, PMID 30518635 correct, supports self-sampling improving coverage in underscreened women."}
+{"item_id": "AP-070", "model": "claude", "match": "no", "rationale": "No PMID provided; model declined to cite despite question requiring specific citation."}
+{"item_id": "AP-071", "model": "claude", "match": "partial", "rationale": "Targets correct, but PMID 33137008 misattributed; that PMID is a 2020 Lancet elimination paper but citation details are wrong/uncertain."}
+{"item_id": "AP-072", "model": "claude", "match": "yes", "rationale": "Correct PMID 30291040 for the Hall et al. Lancet Public Health cervical cancer elimination study; claim supported."}
+{"item_id": "AP-073", "model": "claude", "match": "yes", "rationale": "PMID 26611655 correctly maps to Dryden-Peterson Botswana study supporting younger age and worse survival claims."}
+{"item_id": "AP-074", "model": "claude", "match": "yes", "rationale": "Correct PMID 29449189 and accurate trial description."}
+{"item_id": "AP-075", "model": "claude", "match": "yes", "rationale": "Correct trial, citation, and PMID 34534429."}
+{"item_id": "AP-076", "model": "claude", "match": "partial", "rationale": "Correct trial details but no PMID provided, declined to cite specific number."}
+{"item_id": "AP-077", "model": "claude", "match": "yes", "rationale": "Correct trial, findings, and PMID 31851799."}
+{"item_id": "AP-078", "model": "claude", "match": "yes", "rationale": "Correct trial and PMID 31562799."}
+{"item_id": "AP-079", "model": "claude", "match": "yes", "rationale": "Correct SOLO2 trial with PMID 28754483 and accurate details."}
+{"item_id": "AP-080", "model": "claude", "match": "partial", "rationale": "Correct trial and citation details but did not provide the PMID."}
+{"item_id": "AP-081", "model": "claude", "match": "yes", "rationale": "Correctly identifies GOG-258 trial and provides correct PMID 31189035."}
+{"item_id": "AP-082", "model": "claude", "match": "yes", "rationale": "Correct trial and PMID 37864337 cited."}
+{"item_id": "AP-083", "model": "claude", "match": "yes", "rationale": "Correct ICON8 citation with PMID 31791688 and accurate details."}
+{"item_id": "AP-084", "model": "claude", "match": "partial", "rationale": "Correct trial description and negative result, but no PMID provided."}
+{"item_id": "AP-085", "model": "claude", "match": "yes", "rationale": "Correct SENTICOL citation with PMID 21444878."}
+{"item_id": "AP-086", "model": "claude", "match": "no", "rationale": "Expected PMID 18571391 not provided; gave 18973444 and other different PMIDs."}
+{"item_id": "AP-087", "model": "claude", "match": "yes", "rationale": "Correct trial and PMID 17494925 cited accurately."}
+{"item_id": "AP-088", "model": "claude", "match": "yes", "rationale": "Correct study and matching PMID 33001143 cited."}
+{"item_id": "AP-089", "model": "claude", "match": "partial", "rationale": "Correct trial, author, journal, year; declined to give PMID 35658487."}
+{"item_id": "AP-090", "model": "claude", "match": "yes", "rationale": "Correct PMID 30656645 and accurate FIGO 2018 citation details."}
+{"item_id": "AP-091", "model": "claude", "match": "yes", "rationale": "Correct trial, correct PMID 22204725, accurate citation details."}
+{"item_id": "AP-092", "model": "claude", "match": "partial", "rationale": "Correct trial details and Randall JCO 2019, but did not provide the PMID."}
+{"item_id": "AP-093", "model": "claude", "match": "yes", "rationale": "Correct trial, negative result, and PMID 37080223 match."}
+{"item_id": "AP-094", "model": "claude", "match": "partial", "rationale": "Correct trial details and citation info, but did not provide the PMID."}
+{"item_id": "AP-095", "model": "claude", "match": "yes", "rationale": "Correct PATRICIA citation with PMID 19586656."}
+{"item_id": "AP-096", "model": "claude", "match": "yes", "rationale": "Correct study and PMID 33794207 cited accurately."}
+{"item_id": "AP-097", "model": "claude", "match": "no", "rationale": "Correct study identified but no PMID provided; explicitly declined to cite 22711857."}
+{"item_id": "AP-098", "model": "claude", "match": "no", "rationale": "Declines to provide a rate or supporting PMID citation."}
+{"item_id": "AP-099", "model": "claude", "match": "partial", "rationale": "Mentions rising rates and obesity/diabetes link but provides no specific rate or PMID citation."}
+{"item_id": "AP-100", "model": "claude", "match": "partial", "rationale": "States rising incidence linked to obesity but provides no PMID citation as required."}
+{"item_id": "AP-101", "model": "claude", "match": "no", "rationale": "Declined to provide any PMID citation; no specific supporting reference given as required."}
+{"item_id": "AP-102", "model": "claude", "match": "partial", "rationale": "States rising incidence correctly but provides no specific PMID citation as required."}
+{"item_id": "AP-103", "model": "claude", "match": "no", "rationale": "Declined to provide any PMID; no supporting citation given despite correct general description."}
+{"item_id": "AP-104", "model": "claude", "match": "no", "rationale": "Model declined to provide any specific citation or PMID supporting the claim."}
+{"item_id": "AP-105", "model": "claude", "match": "partial", "rationale": "Correct direction (Black patients more CNH/p53), but PMID unverified and self-flagged as possibly fabricated."}
+{"item_id": "AP-106", "model": "claude", "match": "partial", "rationale": "Correct claim of limited availability, but citation likely misattributed; model itself flags uncertainty."}
+{"item_id": "AP-107", "model": "claude", "match": "partial", "rationale": "Correctly describes limited access; citation unverified and likely misattributed, model admits uncertainty."}
+{"item_id": "AP-108", "model": "claude", "match": "partial", "rationale": "Correctly describes limited access but PMIDs are unverified/likely misattributed, as model itself admits."}
+{"item_id": "AP-001", "model": "gemini", "match": "yes", "rationale": "Correct three mutations; PMID 9145676 accurately cites Struewing NEJM study supporting the claim."}
+{"item_id": "AP-002", "model": "gemini", "match": "yes", "rationale": "Correct 999del5 mutation with valid supporting Thorlacius 1996 citation, PMID 8696335 accurate."}
+{"item_id": "AP-003", "model": "gemini", "match": "yes", "rationale": "Correct mutations named; PMID 10762553 is the genuine Górski 2000 founder mutation study supporting the claim."}
+{"item_id": "AP-004", "model": "gemini", "match": "partial", "rationale": "Names plausible Norwegian founder mutations (3450delCAAG, 1675delA) but citation likely misattributed; PMID may not specifically support Norwegian founders."}
+{"item_id": "AP-005", "model": "gemini", "match": "yes", "rationale": "Correctly names C4446T (BRCA1) and 8765delAG (BRCA2) Quebec founder mutations; Tonin 1998 PMID 9792864 is valid."}
+{"item_id": "AP-006", "model": "gemini", "match": "partial", "rationale": "Correct recurrent variants (p.Gly1738Arg, c.5266dupC), but cited PMID 15300845 appears misattributed/fabricated."}
+{"item_id": "AP-009", "model": "gemini", "match": "partial", "rationale": "PMID 30305636 is real and relevant, but specific recurrent variant claims may be misattributed/unverified."}
+{"item_id": "AP-010", "model": "gemini", "match": "partial", "rationale": "Discusses recurrent Korean variants correctly, but PMID 25920701 is misattributed/incorrect for cited KOHBRA paper."}
+{"item_id": "AP-011", "model": "gemini", "match": "no", "rationale": "Rambling, uncertain reasoning; no verified citation supporting a specific claim about Filipino women."}
+{"item_id": "AP-012", "model": "gemini", "match": "no", "rationale": "No PMID or specific citation provided as required."}
+{"item_id": "AP-013", "model": "gemini", "match": "partial", "rationale": "Describes recurrent mutations plausibly but provides no PMID citation as required."}
+{"item_id": "AP-014", "model": "gemini", "match": "partial", "rationale": "Describes plausible spectrum but provides no valid PMID citation as required."}
+{"item_id": "AP-016", "model": "gemini", "match": "yes", "rationale": "Correct variant BRCA1 c.5266dupC; PMID 21619668 correctly supports Brazilian founder claim."}
+{"item_id": "AP-017", "model": "gemini", "match": "partial", "rationale": "Correct recurrent Colombian founder variants, but citation details (journal/PMID) appear misattributed/inaccurate."}
+{"item_id": "AP-018", "model": "gemini", "match": "partial", "rationale": "Names plausible recurrent variants but provides no PMID; citation requirement unmet."}
+{"item_id": "AP-019", "model": "gemini", "match": "partial", "rationale": "Correct paper (Liede 2002, Am J Hum Genet) but PMID 12145750 is wrong/misattributed."}
+{"item_id": "AP-020", "model": "gemini", "match": "no", "rationale": "No PMID provided; only general claims without a specific citation as required."}
+{"item_id": "AP-023", "model": "gemini", "match": "yes", "rationale": "Correctly states higher East Asian PM frequency; PMIDs 35047822 and 12222994 are valid and support claims."}
+{"item_id": "AP-024", "model": "gemini", "match": "yes", "rationale": "Correct ancestry-based frequency differences; PMID 30447069 is valid 2018 CPIC thiopurine guideline supporting claim."}
+{"item_id": "AP-025", "model": "gemini", "match": "partial", "rationale": "Correct HPV35 and equity claim, but PMID 24888277 likely misattributed/incorrect."}
+{"item_id": "AP-026", "model": "gemini", "match": "yes", "rationale": "Correctly identifies HPV52/58; citations plausible though attribution details unverified."}
+{"item_id": "AP-027", "model": "gemini", "match": "yes", "rationale": "Correct ~20-25% fraction; PMID 25341575 is the genuine GCIG clear cell consensus review supporting the claim."}
+{"item_id": "AP-028", "model": "gemini", "match": "partial", "rationale": "Correct claim, but PMID 28437937 appears misattributed/unverified for the exact study cited."}
+{"item_id": "AP-029", "model": "gemini", "match": "yes", "rationale": "Correct variant (943ins10) and accurate citation; PMID 10431257 supports West African founder claim."}
+{"item_id": "AP-030", "model": "gemini", "match": "yes", "rationale": "Correctly explains lower baseline ANC and avoiding inappropriate reductions; PMID 19180189 valid and supports claim."}
+{"item_id": "AP-034", "model": "gemini", "match": "partial", "rationale": "Correctly states very limited access; citation PMID 35550267 is plausibly real but supports general access barriers, not endometrial-specific claim."}
+{"item_id": "AP-035", "model": "gemini", "match": "partial", "rationale": "Correctly states testing is limited but provides no verifiable PMID citation."}
+{"item_id": "AP-036", "model": "gemini", "match": "partial", "rationale": "Correct severe shortage claim; PMID 23561748 is a real Abdel-Wahab Lancet Oncology Africa RT paper, plausibly supportive."}
+{"item_id": "AP-037", "model": "gemini", "match": "partial", "rationale": "Describes scarcity correctly but provides no PMID citation as required."}
+{"item_id": "AP-038", "model": "gemini", "match": "yes", "rationale": "States limited capacity; citation PMID 28163536 is real and supports the feasibility/workforce claim."}
+{"item_id": "AP-039", "model": "gemini", "match": "partial", "rationale": "Describes limited availability correctly but provides no PMID citation as required."}
+{"item_id": "AP-040", "model": "gemini", "match": "partial", "rationale": "Correct shortage claim; PMID 35550267 is real Lancet Oncology Commission but attribution to specific gyn-onc workforce claim uncertain."}
+{"item_id": "AP-041", "model": "gemini", "match": "yes", "rationale": "Correct citation, PMID 22893746 accurately supports Rwanda's 93.2% coverage claim."}
+{"item_id": "AP-042", "model": "gemini", "match": "partial", "rationale": "Describes catastrophic costs well but provides no PMID citation as required."}
+{"item_id": "AP-043", "model": "gemini", "match": "yes", "rationale": "Correct PMID 35550267 for Lancet Oncology SSA Commission; supports frequent stockouts claim."}
+{"item_id": "AP-044", "model": "gemini", "match": "partial", "rationale": "Correctly notes limited access; PMID 37334994 is real FIGO 2023 paper but is staging-focused, not primarily LMIC access evidence."}
+{"item_id": "AP-045", "model": "gemini", "match": "yes", "rationale": "Correct PMID 19138018 for Sankaranarayanan HPV rural India trial; supports limited colposcopy claim."}
+{"item_id": "AP-046", "model": "gemini", "match": "partial", "rationale": "Correctly cites cost limitation, but PMID 34860155 details appear misattributed/uncertain."}
+{"item_id": "AP-047", "model": "gemini", "match": "partial", "rationale": "Claim of limited access correct; citation exists but details/attribution uncertain and possibly inaccurate."}
+{"item_id": "AP-048", "model": "gemini", "match": "yes", "rationale": "Correct claim of severe shortage; PMID 30730092 is real and supports genetic counseling workforce mapping."}
+{"item_id": "AP-049", "model": "gemini", "match": "partial", "rationale": "Valid PMID for GLOBOCAN 2020 cervical cancer analysis, but specific Angola rate not directly verifiable in cited paper."}
+{"item_id": "AP-050", "model": "gemini", "match": "partial", "rationale": "PMID 33538338 is correct GLOBOCAN 2020 paper, but doesn't list Cameroon-specific 31.5 rate; likely misattributed value."}
+{"item_id": "AP-051", "model": "gemini", "match": "partial", "rationale": "Valid PMIDs for global estimates, but specific DRC rate not directly verified; likely misattribution given registry limitations."}
+{"item_id": "AP-052", "model": "gemini", "match": "partial", "rationale": "Correct GLOBOCAN citation/PMID and coverage caveat, but the specific ASIR value (11.6) is unverified/likely inaccurate."}
+{"item_id": "AP-053", "model": "gemini", "match": "partial", "rationale": "Correct PMID for Singh 2020 cervical analysis, but specific Madagascar ASIR value unverified/likely misattributed."}
+{"item_id": "AP-054", "model": "gemini", "match": "partial", "rationale": "PMID 33538338 is correct GLOBOCAN 2020 source, but specific Burkina Faso rate not verified in that publication."}
+{"item_id": "AP-055", "model": "gemini", "match": "partial", "rationale": "Citations exist and support cervical cancer estimates, but specific Mali rate value unverified/possibly misattributed."}
+{"item_id": "AP-056", "model": "gemini", "match": "no", "rationale": "Citation is truncated/unverifiable and likely fabricated; no valid PMID provided."}
+{"item_id": "AP-057", "model": "gemini", "match": "partial", "rationale": "PMID 20952538 is real de Sanjosé study but not Myanmar-specific; admits data is regional proxy, not country registry."}
+{"item_id": "AP-058", "model": "gemini", "match": "partial", "rationale": "Correctly notes no Lesotho survival data; citations valid but are proxies, not direct support."}
+{"item_id": "AP-059", "model": "gemini", "match": "partial", "rationale": "Correctly cites GLOBOCAN 2020 (PMID valid), but specific 5.4 ASR figure unverifiable; secondary PMID likely misattributed."}
+{"item_id": "AP-060", "model": "gemini", "match": "partial", "rationale": "Correct PMID and registry citation, but specific per-registry rates cannot be verified and may be misattributed."}
+{"item_id": "AP-061", "model": "gemini", "match": "no", "rationale": "Cited PMID incorrect; 21858814 maps to a different article/journal, likely misattributed citation."}
+{"item_id": "AP-062", "model": "gemini", "match": "partial", "rationale": "Provides plausible incidence and real PMIDs, but Philippine-specific claim attribution to these reviews is uncertain/likely misattributed."}
+{"item_id": "AP-063", "model": "gemini", "match": "partial", "rationale": "Acknowledges registry limits and gives hospital-based rates, but PMIDs/citation details likely misattributed and unverified."}
+{"item_id": "AP-064", "model": "gemini", "match": "yes", "rationale": "Correct citation, PMID 20952254 matches de Sanjosé 2010 Lancet Oncol, supports HPV distribution claims."}
+{"item_id": "AP-065", "model": "gemini", "match": "yes", "rationale": "PMID 20952254 correctly cites de Sanjosé 2010 Lancet Oncol, which supports regional HPV attribution claims."}
+{"item_id": "AP-066", "model": "gemini", "match": "no", "rationale": "PMID 29290610 does not correspond to the cited cervical cancer trends article; misattribution."}
+{"item_id": "AP-067", "model": "gemini", "match": "yes", "rationale": "Bobdey et al. citation with correct PMID 28031652 supports India cervical cancer burden claims accurately."}
+{"item_id": "AP-068", "model": "gemini", "match": "yes", "rationale": "Both PMIDs are correct and accurately support the described VIA trials."}
+{"item_id": "AP-069", "model": "gemini", "match": "yes", "rationale": "PMID 30518635 is Arbyn 2018 BMJ meta-analysis correctly supporting self-sampling uptake and accuracy claims."}
+{"item_id": "AP-070", "model": "gemini", "match": "partial", "rationale": "PMID 28443200 is real Reid ovarian cancer review, but East Asia-specific claims may be overattributed."}
+{"item_id": "AP-071", "model": "gemini", "match": "yes", "rationale": "Correct 90-70-90 targets, <4/100,000 threshold, and valid PMID 32004499 supports the claim."}
+{"item_id": "AP-072", "model": "gemini", "match": "yes", "rationale": "PMID 30324896 correctly cites Patel et al. 2018 Euro Surveill on Australia HPV impact; supports claims."}
+{"item_id": "AP-073", "model": "gemini", "match": "yes", "rationale": "PMID 27573661 is real Botswana cohort supporting younger age, poorer survival in WLHIV."}
+{"item_id": "AP-074", "model": "gemini", "match": "yes", "rationale": "Correctly cites PORTEC-3 with PMID 29449189."}
+{"item_id": "AP-075", "model": "gemini", "match": "yes", "rationale": "Correct trial and PMID 34534429 cited."}
+{"item_id": "AP-076", "model": "gemini", "match": "no", "rationale": "Cited PMID 38458215 instead of expected 39288779."}
+{"item_id": "AP-077", "model": "gemini", "match": "yes", "rationale": "Correct PAOLA-1 citation with PMID 31851799."}
+{"item_id": "AP-078", "model": "gemini", "match": "yes", "rationale": "Correct PRIMA trial with matching PMID 31562799."}
+{"item_id": "AP-079", "model": "gemini", "match": "yes", "rationale": "Correct SOLO2 trial with PMID 28754483 cited accurately."}
+{"item_id": "AP-080", "model": "gemini", "match": "yes", "rationale": "Correct PMID 28916367 and accurate ARIEL3 citation."}
+{"item_id": "AP-081", "model": "gemini", "match": "no", "rationale": "Correct trial but wrong PMID (31188545 vs 31189035)"}
+{"item_id": "AP-082", "model": "gemini", "match": "yes", "rationale": "Correct DUO-E trial with matching PMID 37864337 and accurate citation details."}
+{"item_id": "AP-083", "model": "gemini", "match": "partial", "rationale": "Correct trial and description, but PMID 31791688 not cited; different PMIDs given."}
+{"item_id": "AP-084", "model": "gemini", "match": "no", "rationale": "Correct trial and finding but wrong PMID (37924825 vs 38039991)."}
+{"item_id": "AP-085", "model": "gemini", "match": "no", "rationale": "Correct study but wrong PMID (gave 21402604, expected 21444878)."}
+{"item_id": "AP-086", "model": "gemini", "match": "no", "rationale": "Expected PMID 18571391 not cited; provided 19047294 and 11564482 instead."}
+{"item_id": "AP-087", "model": "gemini", "match": "yes", "rationale": "Correct PMID 17494925 and accurate FUTURE II citation."}
+{"item_id": "AP-088", "model": "gemini", "match": "yes", "rationale": "Correct PMID 33001143 and accurate GARNET dostarlimab citation."}
+{"item_id": "AP-089", "model": "gemini", "match": "yes", "rationale": "Correct trial and PMID 35658487."}
+{"item_id": "AP-090", "model": "gemini", "match": "yes", "rationale": "Correct FIGO 2018 staging with accurate PMID 30656645 citation."}
+{"item_id": "AP-091", "model": "gemini", "match": "no", "rationale": "Model provided no answer; empty response."}
+{"item_id": "AP-092", "model": "gemini", "match": "no", "rationale": "Correct trial but wrong PMID (31021666 vs expected 30995174)."}
+{"item_id": "AP-093", "model": "gemini", "match": "partial", "rationale": "Correct trial and findings, but wrong PMID (37068215 vs 37080223)."}
+{"item_id": "AP-094", "model": "gemini", "match": "no", "rationale": "Correct trial and details but cited PMID 31562799 instead of 31562800."}
+{"item_id": "AP-095", "model": "gemini", "match": "yes", "rationale": "Correct PATRICIA trial with matching PMID 19586656."}
+{"item_id": "AP-096", "model": "gemini", "match": "no", "rationale": "Correct study but wrong PMID (33798461 vs expected 33794207)."}
+{"item_id": "AP-097", "model": "gemini", "match": "yes", "rationale": "Correct Alsop study with matching PMID 22711857."}
+{"item_id": "AP-098", "model": "gemini", "match": "partial", "rationale": "Valid PMIDs (Kampala registry, GLOBOCAN) but specific rate values likely misattributed/unverifiable, though citations are plausible."}
+{"item_id": "AP-099", "model": "gemini", "match": "partial", "rationale": "Valid PMID for GLOBOCAN, but doesn't address rising trend with metabolic transition."}
+{"item_id": "AP-100", "model": "gemini", "match": "partial", "rationale": "Correct trend/obesity claim, but PMID 24701264 likely misattributed to a different study."}
+{"item_id": "AP-101", "model": "gemini", "match": "partial", "rationale": "PMID 23853059 is real Gomez JNCI 2013 Asian American cancer trends, but endometrial subtype claims likely overstated/misattributed."}
+{"item_id": "AP-102", "model": "gemini", "match": "partial", "rationale": "Correct rising trend claim; citation is real but PMID 31120536 is incorrect (actual is Clarke's J Clin Oncol paper)."}
+{"item_id": "AP-103", "model": "gemini", "match": "partial", "rationale": "Describes plausible spectrum but provides no PMID citation as required."}
+{"item_id": "AP-104", "model": "gemini", "match": "partial", "rationale": "Citation PMID 26269225 is real and relevant to racial disparities, but likely doesn't support specific Hispanic proportions claimed."}
+{"item_id": "AP-105", "model": "gemini", "match": "partial", "rationale": "Describes subtype variation by ancestry correctly but provides no PMID citation."}
+{"item_id": "AP-106", "model": "gemini", "match": "partial", "rationale": "Correctly states POLE testing very limited in LMICs, but PMID 33328266 is general ESGO guideline, not LMIC-specific; likely misattribution."}
+{"item_id": "AP-107", "model": "gemini", "match": "partial", "rationale": "Describes barriers accurately but provides no PMID citation as required."}
+{"item_id": "AP-108", "model": "gemini", "match": "no", "rationale": "No PMID or specific citation provided as required."}
+{"item_id": "AP-019", "model": "gpt", "match": "partial", "rationale": "Citation is real and relevant, but PMID 12181777 is incorrect for this Liede 2002 AJHG article."}
+{"item_id": "AP-020", "model": "gpt", "match": "partial", "rationale": "Acknowledges sparsity correctly, but PMID/variant attribution unverified and likely misattributed."}
+{"item_id": "AP-023", "model": "gpt", "match": "yes", "rationale": "Correct higher frequency claim; PMID 9110363 is valid and supports East Asian CYP2C19 PM data."}
+{"item_id": "AP-024", "model": "gpt", "match": "yes", "rationale": "Correct ancestry-specific TPMT patterns; PMID 30447069 is valid CPIC guideline supporting the claim."}
+{"item_id": "AP-025", "model": "gpt", "match": "yes", "rationale": "Correctly identifies HPV35, not in 9-valent, equity issue; PMID 20952254 valid and supports regional HPV35 contribution."}
+{"item_id": "AP-026", "model": "gpt", "match": "yes", "rationale": "Correctly identifies HPV52/58; PMID 20473886 is the real Li/Clifford 2011 IJC study supporting geographic variation."}
+{"item_id": "AP-027", "model": "gpt", "match": "partial", "rationale": "Correct fraction range, but citation likely misattributed (PMID may not support East Asian claim)."}
+{"item_id": "AP-028", "model": "gpt", "match": "partial", "rationale": "Correct claim and real PMID, but citation likely misattributed to the specific serous proportion finding."}
+{"item_id": "AP-029", "model": "gpt", "match": "yes", "rationale": "Correctly identifies BRCA1 943ins10 as West African founder variant with plausible Fackenthal PMID citation."}
+{"item_id": "AP-030", "model": "gpt", "match": "yes", "rationale": "Correct concept and valid citation (PMID 20194855, Hsieh JCO 2010) supporting lower cutoff claim."}
+{"item_id": "AP-034", "model": "gpt", "match": "partial", "rationale": "Correctly states very limited availability, but PMID 35045221 is KEYNOTE-775 trial, not about African availability."}
+{"item_id": "AP-035", "model": "gpt", "match": "partial", "rationale": "Correct 'limited' claim; PMID 28165299 is real guideline but doesn't specifically support low-resource availability claim."}
+{"item_id": "AP-036", "model": "gpt", "match": "partial", "rationale": "Correctly describes severe shortage; citation exists and is topically relevant, but specific figures may be misattributed."}
+{"item_id": "AP-037", "model": "gpt", "match": "partial", "rationale": "Scarcity claim correct; PMID 23561747 is real Lancet Oncol Africa RT paper, attribution plausible but unverified."}
+{"item_id": "AP-038", "model": "gpt", "match": "partial", "rationale": "Correct claim (limited capacity) but cited PMID 16509979 addresses KAP, not workforce cytology capacity—likely misattribution."}
+{"item_id": "AP-039", "model": "gpt", "match": "partial", "rationale": "Correct 'limited' claim; citation exists but is regional (Uganda/Kenya/Malawi), not gynecologic-specific."}
+{"item_id": "AP-040", "model": "gpt", "match": "partial", "rationale": "Correctly describes severe shortage; citation is real but about cervical cancer care, not surgical workforce—possible misattribution."}
+{"item_id": "AP-041", "model": "gpt", "match": "yes", "rationale": "Correct citation, accurate PMID, supports high Rwanda HPV coverage claim."}
+{"item_id": "AP-042", "model": "gpt", "match": "partial", "rationale": "Correct catastrophic-cost claim; ACTION study exists but covers general cancer, not cervical-specific; PMID needs verification."}
+{"item_id": "AP-043", "model": "gpt", "match": "partial", "rationale": "Correct stockout claim; PMID 35550267 is real Lancet Oncology Commission but broad, weak specific support."}
+{"item_id": "AP-044", "model": "gpt", "match": "partial", "rationale": "Claim of limited access correct, but PMID 26172027 is ProMisE classifier, not LMIC access—likely misattribution."}
+{"item_id": "AP-045", "model": "gpt", "match": "partial", "rationale": "Correct claim of limited availability; PMID 19339719 is valid but supports screening trial, not colposcopy scarcity specifically."}
+{"item_id": "AP-046", "model": "gpt", "match": "partial", "rationale": "Correctly cites cost barrier; PMID 29584549 is Fader trial but supports efficacy, not availability claim."}
+{"item_id": "AP-047", "model": "gpt", "match": "partial", "rationale": "Correct limited-access claim; PMID 30241143 exists but likely misattributed citation details (JCO Glob Oncol/pages)."}
+{"item_id": "AP-048", "model": "gpt", "match": "partial", "rationale": "Correctly describes severe shortage; citation exists but is European Journal of Human Genetics, minor misattribution to JGC."}
+{"item_id": "AP-049", "model": "gpt", "match": "partial", "rationale": "Valid PMID for that paper, but the specific 35.5 rate for Angola likely misattributed."}
+{"item_id": "AP-050", "model": "gpt", "match": "partial", "rationale": "Correct PMID and real study, but this global analysis may not specifically support Cameroon's 31.3 figure."}
+{"item_id": "AP-051", "model": "gpt", "match": "partial", "rationale": "Valid GLOBOCAN citation exists but doesn't provide DRC-specific rate; likely misattribution of country figure."}
+{"item_id": "AP-052", "model": "gpt", "match": "partial", "rationale": "Valid PMID for real paper, but rate figure likely misattributed to modeled GLOBOCAN estimate, not registry."}
+{"item_id": "AP-053", "model": "gpt", "match": "partial", "rationale": "Valid PMID for cited paper, but ASR figure likely misattributed; Arbyn is modeled estimate, not registry."}
+{"item_id": "AP-054", "model": "gpt", "match": "partial", "rationale": "Citation is real and relevant to cervical cancer mortality, but specific 23.6 rate not verified from that source."}
+{"item_id": "AP-055", "model": "gpt", "match": "partial", "rationale": "PMID exists and covers GLOBOCAN 2022, but specific Mali mortality rate not verified; likely misattribution."}
+{"item_id": "AP-056", "model": "gpt", "match": "partial", "rationale": "HPV16/18 dominance plausible and PMID valid, but de Sanjosé study is global, not Cambodia-specific."}
+{"item_id": "AP-057", "model": "gpt", "match": "partial", "rationale": "Citation is real and relevant, but doesn't specifically report Myanmar country-level data; likely misattribution."}
+{"item_id": "AP-058", "model": "gpt", "match": "no", "rationale": "CONCORD-3 (PMID 29395269) did not include Lesotho; misattributed figure."}
+{"item_id": "AP-059", "model": "gpt", "match": "partial", "rationale": "Valid GLOBOCAN 2022 citation, but country-specific 4.4 rate not verifiable in that global source."}
+{"item_id": "AP-060", "model": "gpt", "match": "partial", "rationale": "PMID valid GLOBOCAN 2022 source, but Nigeria-specific 2.0 rate not verifiable; likely misattribution."}
+{"item_id": "AP-061", "model": "gpt", "match": "partial", "rationale": "Citation exists and covers Malawi cancer registry, but PMID 22782346 may be misattributed; HIV-specific vulvar claim unverified."}
+{"item_id": "AP-062", "model": "gpt", "match": "partial", "rationale": "PMID valid but citation likely doesn't specifically support Philippine incidence figure; misattribution risk."}
+{"item_id": "AP-063", "model": "gpt", "match": "no", "rationale": "PMID 24558783 does not correspond to the cited article/claim; likely misattributed citation."}
+{"item_id": "AP-064", "model": "gpt", "match": "yes", "rationale": "Correct distribution and de Sanjosé 2010 PMID 20952254 is accurate and supports the claim."}
+{"item_id": "AP-065", "model": "gpt", "match": "yes", "rationale": "Correct HPV16/18 dominance description; de Sanjosé 2010 PMID 20952254 is valid and supports claim."}
+{"item_id": "AP-066", "model": "gpt", "match": "partial", "rationale": "Trend description plausible; citation likely misattributed—PMID/details unverified and possibly fabricated."}
+{"item_id": "AP-067", "model": "gpt", "match": "yes", "rationale": "Citation exists and PMID 28144096 correctly supports the Indian cervical cancer burden claim."}
+{"item_id": "AP-068", "model": "gpt", "match": "yes", "rationale": "Mumbai VIA trial correctly cited (PMID 24563518) with accurate mortality reduction; supports the claim."}
+{"item_id": "AP-069", "model": "gpt", "match": "yes", "rationale": "Correct citation; Arbyn 2018 BMJ PMID 30518635 supports self-sampling improving coverage in underscreened women."}
+{"item_id": "AP-070", "model": "gpt", "match": "yes", "rationale": "PMID 33538338 correctly cites GLOBOCAN 2020, supporting incidence claims."}
+{"item_id": "AP-071", "model": "gpt", "match": "yes", "rationale": "Correct 90-70-90 targets, <4/100,000 threshold; PMID 32007141 valid and supports elimination targets modeling."}
+{"item_id": "AP-072", "model": "gpt", "match": "yes", "rationale": "Correct PMID 23599298 for Ali et al. BMJ 2013 genital warts surveillance; figures accurate."}
+{"item_id": "AP-073", "model": "gpt", "match": "yes", "rationale": "PMID 27573661 correctly cites Dryden-Peterson Botswana cohort supporting younger age and worse survival claims."}
+{"item_id": "AP-074", "model": "gpt", "match": "yes", "rationale": "Correct PMID 29449189 and accurate PORTEC-3 description."}
+{"item_id": "AP-075", "model": "gpt", "match": "yes", "rationale": "Correct trial, citation, and PMID 34534429 match."}
+{"item_id": "AP-076", "model": "gpt", "match": "no", "rationale": "Cited PMID 37922915 does not match expected PMID 39288779."}
+{"item_id": "AP-077", "model": "gpt", "match": "yes", "rationale": "Correct PMID 31851799 and accurate PAOLA-1 trial description."}
+{"item_id": "AP-078", "model": "gpt", "match": "yes", "rationale": "Correct PRIMA citation and PMID 31562799."}
+{"item_id": "AP-079", "model": "gpt", "match": "yes", "rationale": "Correct SOLO2 citation with PMID 28754483 and accurate details."}
+{"item_id": "AP-080", "model": "gpt", "match": "yes", "rationale": "Correct ARIEL3 citation with matching PMID 28916367."}
+{"item_id": "AP-081", "model": "gpt", "match": "yes", "rationale": "Correct trial and PMID 31189035 cited accurately."}
+{"item_id": "AP-082", "model": "gpt", "match": "no", "rationale": "Correct trial details but wrong PMID (37856798 vs expected 37864337)."}
+{"item_id": "AP-083", "model": "gpt", "match": "no", "rationale": "Correct trial and citation but PMID 30955884 differs from expected 31791688."}
+{"item_id": "AP-084", "model": "gpt", "match": "no", "rationale": "Correct trial identified but wrong PMID (37984777 vs expected 38039991)."}
+{"item_id": "AP-085", "model": "gpt", "match": "yes", "rationale": "Correct SENTICOL citation with matching PMID 21444878."}
+{"item_id": "AP-086", "model": "gpt", "match": "no", "rationale": "Cites different meta-analysis (PMID 11564482) than expected control PMID 18571391."}
+{"item_id": "AP-087", "model": "gpt", "match": "yes", "rationale": "Correct trial, journal, and PMID 17494925."}
+{"item_id": "AP-088", "model": "gpt", "match": "yes", "rationale": "Correct GARNET study with accurate PMID 33001143 and citation details."}
+{"item_id": "AP-089", "model": "gpt", "match": "yes", "rationale": "Correct trial and PMID 35658487."}
+{"item_id": "AP-090", "model": "gpt", "match": "yes", "rationale": "Correct FIGO 2018 citation with matching PMID 30656645."}
+{"item_id": "AP-091", "model": "gpt", "match": "yes", "rationale": "Correct trial, citation, and PMID 22204725."}
+{"item_id": "AP-092", "model": "gpt", "match": "yes", "rationale": "Correct trial, correct PMID 30995174 with accurate citation."}
+{"item_id": "AP-093", "model": "gpt", "match": "yes", "rationale": "Correct OUTBACK trial with matching PMID 37080223."}
+{"item_id": "AP-094", "model": "gpt", "match": "yes", "rationale": "Correct trial, authors, journal, and PMID 31562800."}
+{"item_id": "AP-095", "model": "gpt", "match": "no", "rationale": "Cites PMID 22075171, not expected 19586656."}
+{"item_id": "AP-096", "model": "gpt", "match": "yes", "rationale": "Correct EMBRACE-I citation with PMID 33794207."}
+{"item_id": "AP-097", "model": "gpt", "match": "yes", "rationale": "Correct PMID 22711857 and accurate Alsop study citation."}
+{"item_id": "AP-098", "model": "gpt", "match": "partial", "rationale": "Valid GLOBOCAN citation (PMID correct), but rate is broad estimate, not registry-specific for Uganda."}
+{"item_id": "AP-099", "model": "gpt", "match": "partial", "rationale": "Provides rate and valid GLOBOCAN citation but omits rising/metabolic transition key point."}
+{"item_id": "AP-100", "model": "gpt", "match": "partial", "rationale": "Correct rising-with-obesity claim, but citation is global, not Saudi/Gulf-specific."}
+{"item_id": "AP-101", "model": "gpt", "match": "no", "rationale": "PMID 21850776 does not correspond to this South Asian cancer incidence study; likely misattribution."}
+{"item_id": "AP-102", "model": "gpt", "match": "partial", "rationale": "Correct rising claim; PMID 30521507 is real but general US, not Asian-specific."}
+{"item_id": "AP-103", "model": "gpt", "match": "no", "rationale": "Citation appears fabricated/misattributed; PMID likely does not support this specific claim."}
+{"item_id": "AP-104", "model": "gpt", "match": "partial", "rationale": "Directional claim plausible; citation exists but focuses on Black women, likely misattributed for Hispanic-specific proportions."}
+{"item_id": "AP-105", "model": "gpt", "match": "partial", "rationale": "Correct direction (African enriched CN-high/serous); PMID 32396860 is a valid pan-cancer ancestry paper but attribution to UCEC-specific claim uncertain."}
+{"item_id": "AP-106", "model": "gpt", "match": "partial", "rationale": "Correct claim of limited availability; PMID 37337978 is FIGO 2023 staging, only tangentially supports LMIC access claim."}
+{"item_id": "AP-107", "model": "gpt", "match": "partial", "rationale": "Correctly notes limited access; FIRES/Rossi PMID 28159465 is accurate but not about low-resource settings specifically."}
+{"item_id": "AP-108", "model": "gpt", "match": "partial", "rationale": "Correctly notes limited access; citation exists but is guideline, not LMIC-specific, risking misattribution."}

@@ -1,0 +1,32 @@
+model,coverage_tertile,category,n_items
+claude,High,Misattributed or fabricated,6
+claude,High,No citation or refusal,10
+claude,High,Supported,17
+claude,Low,Misattributed or fabricated,10
+claude,Low,No citation or refusal,23
+claude,Low,On-topic but unsupported,2
+claude,Low,Supported,2
+claude,Mid,Misattributed or fabricated,8
+claude,Mid,No citation or refusal,15
+claude,Mid,On-topic but unsupported,4
+claude,Mid,Supported,3
+gemini,High,Misattributed or fabricated,16
+gemini,High,No citation or refusal,6
+gemini,High,On-topic but unsupported,4
+gemini,High,Supported,7
+gemini,Low,Misattributed or fabricated,18
+gemini,Low,No citation or refusal,10
+gemini,Low,On-topic but unsupported,9
+gemini,Mid,Misattributed or fabricated,10
+gemini,Mid,No citation or refusal,8
+gemini,Mid,On-topic but unsupported,9
+gemini,Mid,Supported,3
+gpt,High,Misattributed or fabricated,7
+gpt,High,On-topic but unsupported,3
+gpt,High,Supported,23
+gpt,Low,Misattributed or fabricated,12
+gpt,Low,On-topic but unsupported,23
+gpt,Low,Supported,2
+gpt,Mid,Misattributed or fabricated,13
+gpt,Mid,On-topic but unsupported,11
+gpt,Mid,Supported,6

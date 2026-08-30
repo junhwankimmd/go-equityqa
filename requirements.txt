@@ -1,0 +1,13 @@
+# GO-EquityQA — Python dependencies
+# (R analyses additionally require R >= 4.3 with lme4; see src/stats_glmm.R)
+requests
+numpy
+pandas
+scipy
+statsmodels
+matplotlib
+cairosvg
+python-dotenv
+openai
+anthropic
+google-genai
