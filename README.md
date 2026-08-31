@@ -30,6 +30,7 @@ results/
   factmatch_primary_20260829.jsonl     # fact-match (yes/partial/no) for the registered S2 outcome
   scored_gemini_fr.json                # Gemini overconfidence / constrained-reasoning arms
   hard_pilot_raw.json                  # the 24 hard accuracy-probe responses (8 items x 3 models)
+  hard_probe_verdicts.csv              # expert verdicts for the 24 accuracy-probe responses (all correct)
   merged_coverage_*.csv, supp_S1_category_counts.csv, fig*.png/pdf
 src/
   runner.py              # collection + scoring pipeline
