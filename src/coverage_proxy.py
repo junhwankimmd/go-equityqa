@@ -2,26 +2,23 @@
 """
 GO-EquityQA · Arm C — Coverage-Proxy Pipeline
 =============================================
-Purpose (WHY):
-  The pretraining corpora of closed LLMs cannot be inspected. We therefore proxy
-  "how much data the world holds about a (topic x region)" with the **PubMed
-  record count**, and then examine `accuracy ~ log10(count)` and
-  `hallucination ~ log10(count)`.
-  Rationale: a language model's factual ability correlates strongly with the
-  number of relevant documents in pretraining (Kandpal et al., ICML 2023), and
-  QA accuracy tracks entity frequency/popularity (Mallen et al., ACL 2023);
-  hallucination increases at low frequency.
+Purpose:
+  The pretraining corpora of closed LLMs are not observable. The amount of
+  available literature for each (topic x region) pair is therefore approximated
+  by the number of PubMed records, and related to model behavior via
+  `accuracy ~ log10(count)` and `hallucination ~ log10(count)`.
+  Rationale: factual recall in language models correlates with the number of
+  relevant pretraining documents (Kandpal et al., ICML 2023), and QA accuracy
+  correlates with entity frequency/popularity (Mallen et al., ACL 2023);
+  hallucination increases for low-frequency knowledge.
 
-Environment: Google Colab (paid) or local. Standard library + requests + pandas
-+ statsmodels + matplotlib.
-Install: !pip install requests pandas numpy statsmodels matplotlib
+Requirements: requests, pandas, numpy, statsmodels, scipy, matplotlib.
 
-Care (SAFETY):
-  - NCBI E-utilities etiquette: declare tool/email; 3 req/s without an API key,
-    10 req/s with one.
-  - A record *count* is an approximate proxy. Query design drives the result, so
-    define each item's topic_term / region_term with clinical care (see
-    build_query below).
+Notes:
+  - NCBI E-utilities usage policy: identify tool/email; at most 3 requests/s
+    without an API key, 10 requests/s with one.
+  - Record counts are an approximate proxy and depend strongly on query design;
+    define topic_term / region_term for each item carefully (see build_query).
 """
 
 import os
@@ -35,8 +32,7 @@ import requests
 import numpy as np
 import pandas as pd
 
-# Auto-load .env if present (same convention as the sibling citation_verifier /
-# runner modules). Existing environment variables are not overwritten.
+# Load .env if python-dotenv is available; existing environment variables are not overridden.
 try:
     from dotenv import load_dotenv
     load_dotenv()
@@ -44,7 +40,7 @@ except ModuleNotFoundError:
     pass
 
 # ------------------------------------------------------------------
-# 0) Config (NCBI etiquette: declare tool/email; reuses NCBI_EMAIL/NCBI_API_KEY from .env)
+# 0) Configuration (NCBI_EMAIL / NCBI_API_KEY are read from the environment)
 # ------------------------------------------------------------------
 NCBI_EMAIL = os.getenv("NCBI_EMAIL", "your_email@example.com")
 NCBI_TOOL = "GO-EquityQA-coverage"
@@ -56,13 +52,12 @@ MIN_INTERVAL = 0.11 if NCBI_API_KEY else 0.34
 
 
 # ------------------------------------------------------------------
-# 1) PubMed count lookup (proxy core)
+# 1) PubMed record count (coverage proxy)
 # ------------------------------------------------------------------
 def pubmed_count(query: str, retries: int = 4) -> Optional[int]:
     """
-    Return the result *count* for a PubMed query (no documents fetched, retmax=0).
-    WHY: only the count is needed, so this is the lightest possible call.
-    Retries with exponential backoff on failure.
+    Return the number of PubMed records matching `query` (retmax=0, so no
+    records are downloaded). Failed requests are retried with increasing backoff.
     """
     params = {
         "db": "pubmed",
@@ -82,29 +77,28 @@ def pubmed_count(query: str, retries: int = 4) -> Optional[int]:
             if r.status_code == 200:
                 cnt = int(r.json()["esearchresult"]["count"])
                 return cnt
-            # 429/5xx -> backoff
+            # Back off on 429/5xx
             time.sleep(1.5 * (i + 1))
         except Exception:
             time.sleep(1.5 * (i + 1))
-    return None  # failures return None -> treated as missing downstream
+    return None  # Treated as missing downstream
 
 
 def build_query(topic_term: str, region_term: str) -> str:
     """
-    Build the (topic x region) query.
-    Design principles (WHY):
-      - The topic term pins the disease/domain (e.g., "cervical cancer incidence").
-      - The region term is a country/region (e.g., "Nigeria", "Africa",
+    Build a (topic x region) PubMed query.
+      - topic_term specifies the disease/domain (e.g. "cervical cancer incidence").
+      - region_term specifies a country or region (e.g. "Nigeria", "Africa",
         "sub-Saharan Africa").
-      - Too narrow -> zero hits; too broad -> diluted signal. Tune clinically.
-    Add [Title/Abstract], [MeSH], or year filters as needed for precision.
+      - Overly narrow terms return zero hits; overly broad terms dilute the signal.
+    Field tags ([Title/Abstract], [MeSH]) or date filters may be added for precision.
     """
     topic = f'("{topic_term}")'
     region = f'("{region_term}")'
     return f'{topic} AND {region}'
 
 
-# Example mapping from region labels to PubMed terms (extend per project)
+# Example mapping from region labels to PubMed region terms
 REGION_TO_TERM = {
     "sub-saharan africa": "Africa South of the Sahara",
     "africa": "Africa",
@@ -120,26 +114,24 @@ REGION_TO_TERM = {
 
 
 # ------------------------------------------------------------------
-# 2) Build the coverage table
+# 2) Coverage table
 # ------------------------------------------------------------------
 def build_coverage_table(items: pd.DataFrame) -> pd.DataFrame:
     """
-    Input: item DataFrame with at least: item_id, topic_term, region_term.
-      (The seed CSV lacks topic_term/region_term; derive/augment as in the demo.)
-    Output: adds pubmed_count and log_count columns.
-    WHY the log transform: literature volume is Zipf/power-law skewed; log10
-    linearizes it so the regression is interpretable. log1p-style (+1) guards
-    against count=0.
+    Input: item DataFrame with at least item_id, topic_term, region_term.
+    Output: a copy with pubmed_count and log_count columns added.
+    Literature counts are heavily right-skewed (Zipf/power-law), so they are
+    log-transformed as log10(count + 1), which also handles zero counts.
     """
     counts = []
     for _, row in items.iterrows():
         q = build_query(row["topic_term"], row["region_term"])
         c = pubmed_count(q)
         counts.append(c)
-        time.sleep(MIN_INTERVAL)  # NCBI etiquette: rate limit
+        time.sleep(MIN_INTERVAL)  # NCBI rate limit
     out = items.copy()
     out["pubmed_count"] = counts
-    # Missing values (None) are dropped or handled before analysis
+    # Failed lookups (None) yield NaN
     out["log_count"] = out["pubmed_count"].apply(
         lambda x: math.log10(x + 1) if pd.notnull(x) else np.nan
     )
@@ -147,13 +139,13 @@ def build_coverage_table(items: pd.DataFrame) -> pd.DataFrame:
 
 
 # ------------------------------------------------------------------
-# 3) Merge with performance data
+# 3) Merge with model results
 # ------------------------------------------------------------------
 def merge_with_results(coverage: pd.DataFrame, results: pd.DataFrame) -> pd.DataFrame:
     """
-    results columns (minimum): item_id, model, correct(0/1), hallucinate(0/1)
-      - the Arm A/B run records organized per item.
-    Returns: long-format analysis table at item x model level.
+    `results` requires at least: item_id, model, correct (0/1), hallucinate (0/1),
+    one row per item x model.
+    Returns a long-format item x model table for analysis.
     """
     return results.merge(
         coverage[["item_id", "cancer", "type", "axis", "pubmed_count", "log_count"]],
@@ -162,19 +154,17 @@ def merge_with_results(coverage: pd.DataFrame, results: pd.DataFrame) -> pd.Data
 
 
 # ------------------------------------------------------------------
-# 4) Analysis: correlation + mixed-effects logistic (H4)
+# 4) Analysis: correlation and mixed-effects logistic regression (H4)
 # ------------------------------------------------------------------
 def analyze_coverage(df: pd.DataFrame):
     """
-    H4 tests:
-      (a) Spearman correlation (aggregated accuracy vs log_count) — quick check
-          of monotonic association.
-      (b) Mixed-effects logistic: correct ~ log_count + model + (1|item_id),
-          absorbing item difficulty as a random effect.
-    Python GLMM caveat (WHY R is provided as well):
-      statsmodels' BinomialBayesMixedGLM uses variational inference — handy, but
-      R lme4 has better frequentist CIs and convergence stability (see the R
-      snippet below).
+    Test H4:
+      (a) Spearman correlation between per-item accuracy and log_count.
+      (b) Mixed-effects logistic regression: correct ~ log_count + model + (1|item_id),
+          with a random intercept per item to absorb item difficulty.
+    statsmodels' BinomialBayesMixedGLM uses variational inference; for
+    frequentist confidence intervals and more stable convergence, R lme4 is
+    preferred (see R_GLMM_SNIPPET).
     """
     from scipy.stats import spearmanr
     import statsmodels.formula.api as smf
@@ -182,15 +172,14 @@ def analyze_coverage(df: pd.DataFrame):
 
     d = df.dropna(subset=["log_count", "correct"]).copy()
 
-    # (a) per-item mean accuracy vs log_count
+    # (a) Per-item mean accuracy vs log_count
     per_item = d.groupby("item_id").agg(
         acc=("correct", "mean"), log_count=("log_count", "first")
     ).dropna()
     rho, p = spearmanr(per_item["log_count"], per_item["acc"])
     print(f"[Spearman] accuracy vs log10(pubmed_count): rho={rho:.3f}, p={p:.4g}")
 
-    # (b) mixed-effects logistic (random intercept: item_id)
-    #     random effects are specified via vc_formula
+    # (b) Mixed-effects logistic regression; random intercept for item_id via vc_formulas
     try:
         vc = {"item": "0 + C(item_id)"}
         model = BinomialBayesMixedGLM.from_formula(
@@ -200,22 +189,22 @@ def analyze_coverage(df: pd.DataFrame):
         print("\n[GLMM · BinomialBayesMixedGLM] posterior means:")
         print(res.summary())
     except Exception as e:
-        print("Python GLMM failed -> use R lme4 instead. err:", e)
+        print("Python GLMM failed; R lme4 is recommended. Error:", e)
 
     return per_item
 
 
-# R alternative (recommended; stable convergence/CIs) — run via rpy2 in Colab or in R directly:
+# Equivalent model in R (lme4), recommended for confidence intervals and convergence.
 R_GLMM_SNIPPET = r"""
 # install.packages(c("lme4","emmeans"))
 library(lme4)
 df <- read.csv("merged_results.csv")
-# accuracy ~ coverage + model, random intercept per item
+# Accuracy ~ coverage + model, random intercept per item
 m4 <- glmer(correct ~ log_count + model + (1 | item_id),
             data = df, family = binomial,
             control = glmerControl(optimizer = "bobyqa"))
 summary(m4)
-# hallucination with the same structure:
+# Same structure for hallucination:
 mh <- glmer(hallucinate ~ log_count + model + (1 | item_id),
             data = df, family = binomial)
 summary(mh)
@@ -223,12 +212,12 @@ summary(mh)
 
 
 # ------------------------------------------------------------------
-# 5) Plot
+# 5) Visualization
 # ------------------------------------------------------------------
 def plot_coverage_vs_accuracy(per_item: pd.DataFrame, out_png="coverage_vs_accuracy.png"):
     """
-    Scatter + linear fit. Interpretation (WHY): an upward slope means "more data,
-    more accurate" -> supports H4.
+    Scatter plot of per-item accuracy against log coverage with a linear fit.
+    A positive slope (higher accuracy with more literature) is consistent with H4.
     """
     import matplotlib.pyplot as plt
     x = per_item["log_count"].values
@@ -248,11 +237,10 @@ def plot_coverage_vs_accuracy(per_item: pd.DataFrame, out_png="coverage_vs_accur
 
 
 # ------------------------------------------------------------------
-# 6) Usage example (DEMO)
+# 6) Example usage
 # ------------------------------------------------------------------
 if __name__ == "__main__":
-    # (1) Example of augmenting the seed CSV with topic_term/region_term.
-    #     In practice, define these clinically per item and store them as columns.
+    # (1) Example items with topic_term/region_term defined per item.
     demo = pd.DataFrame([
         {"item_id": "Cx-01", "topic_term": "cervical cancer incidence", "region_term": "Africa South of the Sahara"},
         {"item_id": "Cx-02", "topic_term": "cervical cancer incidence", "region_term": "Europe"},
@@ -265,13 +253,12 @@ if __name__ == "__main__":
     cov = build_coverage_table(demo)
     print(cov[["item_id", "pubmed_count", "log_count"]])
 
-    # (2) Merge with performance records (Arm A/B) — dummy example here.
-    #     Replace with real model-run results.
+    # (2) Merge with model results; simulated here for illustration.
     rng = np.random.default_rng(42)
     rows = []
     for _, r in cov.iterrows():
         for mdl in ["gpt", "claude", "gemini", "llama"]:
-            # demo only: higher coverage -> higher accuracy probability (replace with real data)
+            # Simulated: probability of a correct answer increases with coverage
             p = 1 / (1 + math.exp(-(0.6 * (r["log_count"] - 3))))
             rows.append({"item_id": r["item_id"], "model": mdl,
                          "correct": int(rng.random() < p),
@@ -283,4 +270,4 @@ if __name__ == "__main__":
     per_item = analyze_coverage(merged)
     plot_coverage_vs_accuracy(per_item)
 
-    print("\nSee the R_GLMM_SNIPPET variable for the recommended R (lme4) code.")
+    print("\nSee R_GLMM_SNIPPET for the recommended R (lme4) model.")

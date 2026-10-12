@@ -1,0 +1,675 @@
+[
+  {
+    "item_id": "DR-P-01",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-04",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-05",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-08",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-10",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-11",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-01",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-04",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-05",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-08",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-10",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED",
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-11",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-01",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-04",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 0,
+    "cats": [
+      "NO_CITATION"
+    ]
+  },
+  {
+    "item_id": "DR-P-05",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED",
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-08",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-10",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "PARTIAL",
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-11",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL",
+      "UNSUPPORTED_ONTOPIC"
+    ]
+  },
+  {
+    "item_id": "DR-P-17",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-19",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-20",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-21",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-22",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-23",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-24",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-25",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-29",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-31",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-32",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-33",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-36",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-38",
+    "model": "gpt",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-17",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 0,
+    "cats": [
+      "NO_CITATION"
+    ]
+  },
+  {
+    "item_id": "DR-P-19",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 0,
+    "cats": [
+      "NO_CITATION"
+    ]
+  },
+  {
+    "item_id": "DR-P-20",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 0,
+    "cats": [
+      "NO_CITATION"
+    ]
+  },
+  {
+    "item_id": "DR-P-21",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-22",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-23",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-24",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 0,
+    "cats": [
+      "NO_CITATION"
+    ]
+  },
+  {
+    "item_id": "DR-P-25",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 0,
+    "cats": [
+      "NO_CITATION"
+    ]
+  },
+  {
+    "item_id": "DR-P-29",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 0,
+    "cats": [
+      "NO_CITATION"
+    ]
+  },
+  {
+    "item_id": "DR-P-31",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 0,
+    "cats": [
+      "NO_CITATION"
+    ]
+  },
+  {
+    "item_id": "DR-P-32",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "UNSUPPORTED_ONTOPIC",
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-33",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "UNSUPPORTED_ONTOPIC"
+    ]
+  },
+  {
+    "item_id": "DR-P-36",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER",
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-38",
+    "model": "claude",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 0,
+    "cats": [
+      "NO_CITATION"
+    ]
+  },
+  {
+    "item_id": "DR-P-17",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-19",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 1,
+    "cats": [
+      "PARTIAL",
+      "SUPPORTED"
+    ]
+  },
+  {
+    "item_id": "DR-P-20",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL",
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-21",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 0,
+    "gpt_supported": 0,
+    "cats": [
+      "NO_CITATION"
+    ]
+  },
+  {
+    "item_id": "DR-P-22",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-23",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER",
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-24",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-25",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-29",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 0,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-31",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL",
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-32",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER",
+      "PARTIAL"
+    ]
+  },
+  {
+    "item_id": "DR-P-33",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "UNSUPPORTED_ONTOPIC",
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-36",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  },
+  {
+    "item_id": "DR-P-38",
+    "model": "gemini",
+    "log_count": 0.0,
+    "gpt_fab": 1,
+    "gpt_citefail": 1,
+    "gpt_supported": 0,
+    "cats": [
+      "PARTIAL",
+      "MISATTRIBUTED_WRONGPAPER"
+    ]
+  }
+]

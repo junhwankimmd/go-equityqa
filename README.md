@@ -1,65 +1,79 @@
 # GO-EquityQA
 
-Benchmark, model responses, citation judgments, and analysis code for:
+Benchmark, model responses, citation judgments, verification harness, and analysis code for the study
 
-> **Citation-support failure and resource-inference bias in frontier large language models: the case of gynecologic oncology** (submitted).
+> **Plausible citations, unsupported claims, and nationality-dependent recommendations: hidden failure modes of large language models in gynecologic oncology**
 
-Preregistration: https://osf.io/a379w · OSF project: https://osf.io/a39qk (DOI 10.17605/OSF.IO/A39QK)
+A preregistered 308-item gynecologic-oncology benchmark (252 confirmatory and 56 exploration-only items) administered to GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro Preview. It tests whether cited papers support the claims they accompany, whether unsupported citation tracks a PubMed-count measure of literature coverage, and whether otherwise-invariant management recommendations change with patient nationality.
 
-## What this study is
-
-A preregistered 308-item benchmark testing whether frontier large language models (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro Preview) fail on gynecologic-oncology equity questions through missing knowledge, unreliable citation provenance, or nationality-dependent behavior, evaluated against a PubMed-count literature-coverage proxy per topic-by-region pair.
+**Preregistration:** Open Science Framework, registration [osf.io/a379w](https://osf.io/a379w); project [osf.io/a39qk](https://osf.io/a39qk) (DOI [10.17605/OSF.IO/A39QK](https://doi.org/10.17605/OSF.IO/A39QK)). Registered before confirmatory data collection; confirmatory analyses use only items with `analysis_set = confirmatory`.
 
 ## Repository layout
 
 ```
 data/
-  items_v3_300.csv                     # all 308 benchmark items (analysis_set marks confirmatory/exploratory)
-  items_v3_confirmatory.csv            # the 252 confirmatory items
-  adjudication_dualjudge_final.csv     # human adjudication of the 32 judge-discrepant citations
+  items_v3_300.csv                       all 308 items (arm, axis, question, expected key point,
+                                         ground-truth source, analysis_set, coverage terms and PubMed counts)
+  items_v3_confirmatory.csv              the 252 confirmatory items
+  adjudication_dualjudge_final.csv       expert adjudication of the 32 judge-discrepant citations
+  review/                                blinded expert rating sheets (raters A and B) and unblinding key
+                                         for the 36-response judge-validation sample
 results/
-  responses_20260712_075650.json       # confirmatory model responses (252 items x 3 models)
-  responses_20260708_203950.json       # armP pilot-batch responses (incl. the 8 exploration items)
-  scored_20260712_075650.json          # primary (Claude-judge) citation verdicts
-  dualjudge_gpt_primary_20260829.jsonl # second-judge (GPT) verdicts, all 300 primary responses
-  scored_final_adjudicated_20260829.json  # FINAL primary dataset (dual judge + human adjudication)
-  merged_strict_final_20260829.csv     # analysis file: strict fabrication ~ coverage
-  merged_citefail_final_20260829.csv   # analysis file: citation-support failure ~ coverage
-  scored_20260711_165334.json          # exploration-set verdicts (final judge)
-  scored_expl8_rejudge_20260826.json   # final-judge rescoring of the 8 armP exploration items
-  factmatch_primary_20260829.jsonl     # fact-match (yes/partial/no) for the registered S2 outcome
-  scored_gemini_fr.json                # Gemini overconfidence / constrained-reasoning arms
-  hard_pilot_raw.json                  # the 24 hard accuracy-probe responses (8 items x 3 models)
-  hard_probe_verdicts.csv              # expert verdicts for the 24 accuracy-probe responses (all correct)
-  merged_coverage_*.csv, supp_S1_category_counts.csv, fig*.png/pdf
+  responses_20260712_075650.json         confirmatory model responses (252 items x 3 models)
+  responses_derisk_combined.json         exploration-only provenance responses (40 items x 3 models)
+  responses_20260708_203950.json         pilot-batch responses (includes the remaining 8 exploration items)
+  scored_20260712_075650.json            primary-judge (Claude Opus 4.8) verdicts, all confirmatory arms
+  dualjudge_gpt_primary_20260829.jsonl   second-judge (GPT-5.5) verdicts, all 300 confirmatory provenance responses
+  scored_final_adjudicated_20260829.json final provenance dataset (primary judge with adjudicated discrepancies)
+  merged_strict_final_20260829.csv       analysis table: strict fabrication ~ coverage
+  merged_citefail_final_20260829.csv     analysis table: citation-support failure ~ coverage
+  glmm_final_summaries.txt               mixed-effects model coefficients, standard errors, and 95% CIs
+  scored_20260711_165334.json            exploration-set verdicts (final judge)
+  scored_expl8_rejudge_20260826.json     final-judge rescoring of the 8 pilot-batch exploration items
+  judge_sensitivity_gpt.json             second-judge verdicts on an exploration subsample
+  factmatch_primary_20260829.jsonl       fact match (yes / partial / no) for confirmatory provenance responses
+  scored_gemini_fr.json                  Gemini overconfidence and constrained-reasoning verdicts
+  hard_pilot_raw.json, hard_probe_verdicts.csv   the 24 accuracy-probe responses and expert verdicts
+  merged_*_confirmatory.csv, merged_coverage_20260711_170334.csv   coverage-merged tables
+  supp_S1_category_counts.csv            counts underlying Supplementary Table S1
+  fig1-4 (PNG as submitted; PDF vector versions)
 src/
-  runner.py              # collection + scoring pipeline
-  citation_verifier.py   # 3-layer citation verification (esearch -> efetch -> LLM support judge)
-  coverage_proxy.py      # PubMed coverage counts per topic x region
-  stats_glmm.R           # mixed-effects logistic models (lme4)
+  runner.py              response collection, citation verification, answer judges, per-item aggregation
+  citation_verifier.py   three-layer citation verification (existence, record identity, claim support)
+  coverage_proxy.py      PubMed-count literature-coverage proxy
+  run_coverage.py        coverage-proxy driver: queries counts and merges them with scored responses
+  glmm_final.R           mixed-effects models reported in the manuscript
+  stats_glmm.R           mixed-effects models on coverage-merged tables
+  make_figs.py           Figures 2-3 and Supplementary Table S1 counts
+  make_pretty_figs.py    Figures 1 and 4
 docs/
   osf_preregistration_en.md
 ```
 
-## Reproducing the primary analyses
+## Reproducing the analyses
+
+Python 3.10+ (`pip install -r requirements.txt`) and R 4.3 with `lme4`.
 
 ```bash
-# mixed-effects models (R >= 4.3, lme4)
-Rscript -e 'library(lme4);
-for (p in c("results/merged_strict_final_20260829.csv","results/merged_citefail_final_20260829.csv")) {
-  d <- read.csv(p); d$model <- factor(d$model, levels=c("gpt","claude","gemini"));
-  print(summary(glmer(fabricated ~ log_count + model + (1|item_id), d, family=binomial,
-        control=glmerControl(optimizer="bobyqa")))$coefficients) }'
+Rscript src/glmm_final.R          # writes results/glmm_final_summaries.txt
+python src/make_figs.py           # Figures 2-3 and Supplementary Table S1 counts
+python src/make_pretty_figs.py    # Figures 1 and 4 (requires the Cairo graphics library)
 ```
 
-Re-running collection or judging requires API keys in a local `.env` (`OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `GOOGLE_API_KEY`, `NCBI_EMAIL`); never commit keys.
+Citation-support failure counts a response as failed when at least one citation is on-topic but unsupported, partially supported, misattributed, or non-existent and no citation supports the claim. Strict fabrication counts only misattributed or non-existent identifiers. Coverage is `log_count = log10(PubMed count + 1)`.
 
-## Notes on the data
+Re-scoring or collecting responses requires API keys: copy `.env.example` to `.env` and fill in the keys you have (providers without a key are skipped), then for example
 
-- Judge models: primary `claude-opus-4-8`; second judge `gpt-5.5`; both anchored to the original question. The 32 citations on which the judges disagreed were adjudicated by two blinded gynecologic oncologists (`data/adjudication_dualjudge_final.csv`); `scored_final_adjudicated_20260829.json` is the endpoint-defining dataset.
-- In `items_v3_300.csv`, the Korean flag `출처 확인 필요` in `ground_truth_source` marks probe items whose primary outcome is citation support rather than a verifiable stated fact ("source verification required").
-- Responses were collected 11-12 July 2026 (Gemini overconfidence/constrained-reasoning arms on 12 July 2026).
+```bash
+RESPONSES_JSON=results/responses_20260712_075650.json python src/runner.py
+```
+
+Model outputs are not deterministic, so newly collected responses will differ from the archived ones. Responses were collected on 11-12 July 2026; the archived responses and verdicts are the data analyzed in the manuscript.
 
 ## License
 
-Code: MIT (see `LICENSE`). Data (items, responses, judgments): CC BY 4.0 (see `DATA_LICENSE`).
+Code: MIT (`LICENSE`). Data (items, responses, judgments): CC BY 4.0 (`DATA_LICENSE`).
+
+## Contact
+
+Junhwan Kim, MD, Soonchunhyang University Seoul Hospital (junhwankimmd@gmail.com)

@@ -1,0 +1,18 @@
+===== strict_fabrication (n = 300 responses, 100 items) =====
+Model: outcome ~ log10(coverage + 1) + model + (1 | item); reference model = Claude Opus 4.8
+            Estimate Std. Error z value Pr(>|z|)  CI_low CI_high
+(Intercept)  -0.9982     0.2807 -3.5562   0.0004 -1.5483 -0.4480
+log_count    -0.1895     0.1556 -1.2178   0.2233 -0.4944  0.1155
+modelgpt      0.4069     0.3212  1.2668   0.2052 -0.2226  1.0364
+modelgemini   0.9316     0.3163  2.9451   0.0032  0.3116  1.5515
+Random intercept SD (item): 0.2752
+
+===== citation_support_failure (n = 300 responses, 100 items) =====
+Model: outcome ~ log10(coverage + 1) + model + (1 | item); reference model = Claude Opus 4.8
+            Estimate Std. Error z value Pr(>|z|)  CI_low CI_high
+(Intercept)  -0.1700     0.2804 -0.6060   0.5445 -0.7196  0.3797
+log_count    -1.1246     0.2000 -5.6220   0.0000 -1.5167 -0.7326
+modelgpt      2.1646     0.3850  5.6229   0.0000  1.4101  2.9191
+modelgemini   1.6744     0.3607  4.6423   0.0000  0.9675  2.3813
+Random intercept SD (item): 0.5023
+

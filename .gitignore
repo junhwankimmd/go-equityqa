@@ -1,4 +1,15 @@
+# credentials
 .env
-.DS_Store
+*.key
+*.pem
+# python
 __pycache__/
 *.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+# OS
+.DS_Store
+# temporary files and run checkpoints
+*.tmp
+results/*_ckpt.jsonl
